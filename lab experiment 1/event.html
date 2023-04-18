@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>eventhandling</title>
+</head>
+
+<body>
+    <h1>HTML DOM EVENTS</h1>
+    <h2>The onclick Event</h2>
+
+    <p>The onclick event triggers a function when an element is clicked on....</p>
+    <p>Click to trigger a function that will show output "now you know how click action works":</p>
+
+    <button id="but">Click me to check how click on works</button>
+    <p id="de" style="color:red;
+              font-size: 20px;
+              font-weight: bold;"></p>
+
+    <p id="up" style="color:deeppink;
+              font-size: 20px;
+              font-weight: bold;"></p>
+    <p id="down" style="color:blueviolet;
+              font-size: 20px;
+              font-weight: bold;"></p>
+    <input id="he" type="text">
+
+    <script>
+        document.getElementById("but").addEventListener("click", function displayDate() {
+            document.getElementById("de").innerHTML = "clicked";
+            document.getElementById("de").style.color = "navajowhite";
+        });
+        document.getElementById("but").addEventListener("mouseover", function f2() {
+            document.getElementById("but").style.color = "blue";
+        });
+        document.getElementById("but").addEventListener("mouseout", function f3() {
+            document.getElementById("but").style.color = "black";
+        });
+        document.getElementById("but").addEventListener("dblclick", function f4() {
+            document.getElementById("de").innerHTML = "doubleclicked";
+            document.getElementById("de").style.color = "red";
+        });
+        document.getElementById("he").addEventListener("keypress", function my() {
+            alert("You pressed a key inside the input field");
+        });
+        document.getElementById("he").addEventListener("keyup", function down() {
+            document.getElementById("up").innerHTML = "You pressed  keyup inside the input field";
+        });
+    </script>
+
+</body>
+
+</html>

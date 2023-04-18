@@ -1,0 +1,100 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="Styles.css" />
+</head>
+
+<body>
+    <div id="bg">
+        <center></center>
+        <br />
+        <b><u> <h1>REGISTRATION FORM</h1></u>
+                </b>
+        <div id="form">
+            <form method="get" action="submit.html">
+                <table id="table">
+                    <tr>
+                        <td>NAME:</td>
+                        <td>
+                            <input type="text" name="username" size="30" maxlength="30" placeholder="Enter your name" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> <b>DOB:</b> </td>
+                        <td><input type="date" name="dob"> </td>
+                    </tr>
+
+                    <tr>
+                        <td>EMAIL ID:</td>
+                        <td>
+                            <input id="email" type="email" name="email" size="30" maxlength="100" placeholder="Enter your email" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>MOBILE NO:</td>
+                        <td>
+                            <input type="tel" name="number" size="30" maxlength="12" placeholder="Enter Mobile no" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>GENDER:</td>
+                        <td>
+                            <input id="male" type="radio" name="gender" value="male" />
+                            <label for="male">M</label>
+                            <input id="female" type="radio" name="gender" value="female" />
+                            <label for="female">F</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ADDRESS:</td>
+                        <td>
+                            <textarea rows="4" cols="40" id="comments">
+                                    </textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> <b>Religion:</b> </td>
+                        <td> <select>
+                        <option value="hin">Hindu</option>
+                        <option value="chr">Christian</option>
+                        <option value="mus">Muslim</option>
+                    </td>
+                 </tr>
+                 <tr>
+                <td>Course</td>
+                <td>
+                    <select id="ck">
+                        <option value="A" required="required">AI&ML</option>
+                        <option value="F" required="required">Full stack</option>
+                        <option value="D" required="required">DSA using python</option>
+                        <option value="J" required="required">DSA using java</option>
+                        <option value="FL" required="required">Flask</option>
+                    </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Languages:</td>
+                        <td>
+                            <input type="checkbox" name="T" value="Singing" /> Telugu
+                            <input type="checkbox" name="E" value="dancing" /> English
+                            <input type="checkbox" name="H" value="Drawing" /> Hindi
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="submit">Submit</button>
+                            <button type="reset">Reset</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
+
+</html>

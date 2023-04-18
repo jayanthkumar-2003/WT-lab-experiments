@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hotel Bill Generator</title>
+    <style media="screen">
+        #tab {
+            width: 320px;
+            border-color: black;
+        }
+        
+        .container {
+            margin-top: 10%;
+            display: flex;
+            justify-content: center;
+        }
+        
+        body {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_nVjcKTJXUAA0YGslbqs-D4ZrbpjAiZUKVEoADHUd5A&usqp=CAU&ec=48665701");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: #907874;
+        }
+        
+        .box1 {
+            border: 5px solid;
+            position: absolute;
+            width: 25%;
+            padding: 10px;
+            background-color: lightskyblue;
+            opacity: 0.8;
+            margin-right: 50%;
+        }
+        
+        .box2 {
+            border: 5px solid;
+            margin-left: 15%;
+            border-color: black;
+            position: absolute;
+            width: 25%;
+            left: 500px;
+            padding: 10px;
+            background-color: darkgoldenrod;
+            opacity: 0.8;
+        }
+        
+        .box1 h1 {
+            text-align: center;
+        }
+        
+        .box2 h1 {
+            text-align: center;
+        }
+        
+        .box2 td,
+        th,
+        tr {
+            padding: 10px;
+        }
+    </style>
+    <script type="text/javascript">
+        function f() {
+
+            const v1 = parseFloat(document.getElementById("coffee").value);
+            const v2 = parseFloat(document.getElementById("starters").value);
+            const v3 = parseFloat(document.getElementById("drinks").value);
+            const v4 = parseFloat(document.getElementById("desserts").value);
+            const v5 = v1 + v2 + v3 + v4;
+            const v6 = v5 + "$";
+            document.getElementById('p').innerHTML = v6;
+            document.getElementById('pp').innerHTML = "Thankyou,Visit Again!!!";
+
+            document.getElementById("i11").innerHTML = v1 + "$";
+            document.getElementById("i22").innerHTML = v2 + "$";
+            document.getElementById("i33").innerHTML = v3 + "$";
+            document.getElementById("i44").innerHTML = v4 + "$";
+            if (v1 === 0) {
+                document.getElementById("i1").innerHTML = "None";
+            } else if (v1 === 4.99) {
+                document.getElementById("i1").innerHTML = "Americano";
+            } else if (v1 === 5.99) {
+                document.getElementById("i1").innerHTML = "Cappuchino";
+            } else if (v1 === 6.99) {
+                document.getElementById("i1").innerHTML = "Latte";
+            }
+            if (v2 === 0) {
+                document.getElementById("i2").innerHTML = "None";
+            } else if (v2 === 12.99) {
+                document.getElementById("i2").innerHTML = "Chicken 65";
+            } else if (v2 === 14.99) {
+                document.getElementById("i2").innerHTML = "Chicken Tikka";
+            } else if (v2 === 16.99) {
+                document.getElementById("i2").innerHTML = "Paneer 65";
+            }
+            if (v3 === 0) {
+                document.getElementById("i3").innerHTML = "None";
+            } else if (v3 === 2.99) {
+                document.getElementById("i3").innerHTML = "Soda";
+            } else if (v3 === 4.99) {
+                document.getElementById("i3").innerHTML = "Sprite";
+            } else if (v3 === 7.99) {
+                document.getElementById("i3").innerHTML = "Limca";
+            }
+            if (v4 === 0) {
+                document.getElementById("i4").innerHTML = "None";
+            } else if (v4 === 3.99) {
+                document.getElementById("i4").innerHTML = "Cheese Cake";
+            } else if (v4 === 4.99) {
+                document.getElementById("i4").innerHTML = "Vanilla Cake";
+            } else if (v4 === 5.99) {
+                document.getElementById("i4").innerHTML = "Chocolate Cake";
+            }
+            document.getElementById("i5").innerHTML = v6;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1">
+            <h1> Divine French Dining</h1>
+            <form class="" action="" method="post">
+                <table cellspacing=1 0px>
+                    <tr>
+                        <td>
+                            <label for="coffee">Coffee:</label>
+                        </td>
+                        <td>
+                            <select id="coffee" name="coffee">
+              <option value="0">None</option>
+              <option value="4.99">Americano</option>
+              <option value="5.99">Cappuchino</option>
+              <option value="6.99">Latte</option>
+            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="starters">Starters:</label>
+                        </td>
+                        <td>
+                            <select id="starters" name="starters">
+              <option value="0">None</option>
+              <option value="12.99">Chicken 65</option>
+              <option value="14.99">Chicken Tikka</option>
+              <option value="16.99">Paneer 65</option>
+            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="drinks">Drinks</label>
+                        </td>
+                        <td>
+                            <select id="drinks" name="drinks">
+              <option value="0">None</option>
+              <option value="2.99">Soda</option>
+              <option value="4.99">Sprite</option>
+              <option value="7.99">Limca</option>
+            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="Desserts">Desserts</label>
+                        </td>
+                        <td>
+                            <select id="desserts" name="desserts">
+              <option value="0">None</option>
+              <option value="3.99">Cheese cake</option>
+              <option value="4.99">Vanilla Cake</option>
+              <option value="5.99">Chocolate Cake</option>
+            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="button" name="button" onclick="f()">submit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Total Amount:</p>
+
+                        </td>
+
+
+                        <td>
+                            <p id="p"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p id="pp"></p>
+                        </td>
+                    </tr>
+
+                </table>
+            </form>
+        </div>
+        <div class="box2">
+            <h1>BILL</h1>
+            <table border="1px" id="tab">
+                <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Cost</th>
+                </tr>
+                <tr>
+                    <td>Coffee</td>
+                    <td id="i1"></td>
+                    <td id="i11"></td>
+                </tr>
+                <tr>
+                    <td>Starters</td>
+                    <td id="i2"></td>
+                    <td id="i22"></td>
+                </tr>
+                <tr>
+                    <td>Drinks</td>
+                    <td id="i3"></td>
+                    <td id="i33"></td>
+                </tr>
+                <tr>
+                    <td>Deserts</td>
+                    <td id="i4"></td>
+                    <td id="i44"></td>
+                </tr>
+                <tr>
+                    <td>Total:</td>
+                    <td id="i5"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
